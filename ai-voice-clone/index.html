@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Voice Cloning TTS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container glass-card">
+    <h1>🎙 AI Voice Cloning Studio</h1>
+
+    <!-- Voice Cloning Section -->
+    <section class="card">
+        <!-- <h2>1️⃣ Upload Voice Sample</h2>
+        <input type="file" id="voiceFile" accept="audio/*" />
+        <button onclick="cloneVoice()">Clone Voice</button>
+        <p id="cloneStatus"></p> -->
+        <!-- From Uiverse.io by Yaya12085 --> 
+<form class="modal">
+  <!-- <button class="button">
+  <span class="X"></span>
+  <span class="Y"></span>
+ </button> -->
+      <div class="content">
+        <span class="title">Upload a File</span>
+        <p class="message">Select a file to upload from your computer or device.</p>
+        
+        <div class="actions">
+            <label for="voiceFile" class="button upload-btn">Choose File
+              <input hidden type="file" id="voiceFile" accept="audio" onchange="displaySelectedFile()" />
+            </label>
+        </div>
+        <button type="button" onclick="cloneVoice()">Clone Voice</button>
+       
+           <div class="result">
+               <div class="file-uploaded">
+                  <p id="selectedFileName"></p>
+                  <p id="cloneStatus"></p>
+               </div>
+           </div>
+  </div>
+</form>
+    </section>
+
+    <!-- Text to Speech Section -->
+    <section class="card">
+        <h2> Convert Text to Speech</h2>
+        <textarea id="textInput" placeholder="Enter text here..."></textarea>
+        <input type="text" id="voiceId" placeholder="Enter Voice ID from cloning step" />
+        <button onclick="generateSpeech()">Generate Speech</button>
+    </section>
+
+    <!-- Audio Player -->
+    <section class="card">
+        <h2> Output</h2>
+        <audio id="audioPlayer" controls></audio>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
